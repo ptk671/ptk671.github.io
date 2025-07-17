@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <title>カウントダウン</title>
+        <style>
+            p#gomi {
+                font-size: 150px;
+                font-weight: bold;
+                color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="gomi">null</p>
+        <script>
+            var p = document.getElementById("gomi");
+            setInterval(function () {
+                let diff = 1752850800 - Math.floor(new Date().getTime() / 1000);
+                p.innerHTML = diff > 0 ? diff : "0";
+            }, 1000);
+        </script>
+    </body>
+</html>
